@@ -3,17 +3,17 @@ from typing import Dict
 # Populate this dictionary with at least two languages.
 # Use integers for keys and strings for values.
 # Example: Key = 1. Value = 'English'.
-lang_dict = {1: 'English', 2: 'Spanish', 3: 'Portuguese'
+lang_dict = {1: 'English', 2: 'Spanish', 3: 'Portuguese', 4: 'Chinese'
 }
 
 # Populate this dictionary with appropriate prompts that correspond with the ids from lang_dict.
 # Example: Key = 1. Value = 'What is your name?'.
-name_prompt_dict = {1: 'What is your name?', 2: '¿Cómo te llamas?', 3: 'Qual é o seu nome?'
+name_prompt_dict = {1: 'What is your name?', 2: '¿Cómo te llamas?', 3: 'Qual é o seu nome?', 4: '请问你贵姓大名'
 }
 
 # Populate this dictionary with appropriate prompts that correspond with the ids from lang_dict.
 # Example: Key = 1. Value = 'Hello'.
-greetings_dict = {1: 'Hello', 2: 'Hola', 3: 'Olá'}
+greetings_dict = {1: 'Hello', 2: 'Hola', 3: 'Olá', 4: '你好'}
 
 
 def print_language_options(lang_options: Dict[int, str]) -> None:
@@ -64,10 +64,9 @@ def get_name_input(name_prompt_options: Dict[int, str], lang_choice: int) -> str
     :param lang_choice: The language the user has chosen
     :return:
     """
-
+    # for lang_choice in name_prompt_options:
     return name_prompt_options[lang_choice]
 
-    # return name_prompt_options.get(lang_choice)
 
 
 def name_input(name_prompt: str) -> str:
@@ -91,8 +90,9 @@ def greet(name: str, greetings_options: Dict[int, str], lang_choice: int) -> Non
     :return:
     """
 
+    # for lang_choice in greetings_options:
     print(greetings_options[lang_choice] + ' ' + name)
-    # print(greetings_options.get(lang_choice) + ' ' + name
+
 
 if __name__ == '__main__':
     print_language_options(lang_dict)

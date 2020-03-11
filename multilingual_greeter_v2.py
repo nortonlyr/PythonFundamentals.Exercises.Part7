@@ -94,6 +94,13 @@ def greet(name: str, greetings_options: Dict[int, str], lang_choice: int) -> Non
     print(greetings_options[lang_choice] + ' ' + name)
     # print(greetings_options.get(lang_choice) + ' ' + name
 
+def admin_or_user_mode():
+    a = input('1. Admin mode \n 2. User mode \n')
+    return a
+
+def add_or_edit():
+    a = input('1. Add languages \n 2. Edit greeting \n')
+
 if __name__ == '__main__':
     print_language_options(lang_dict)
     chosen_lang = language_input()
