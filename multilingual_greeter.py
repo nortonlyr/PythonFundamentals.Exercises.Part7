@@ -38,6 +38,7 @@ def language_input() -> int:
     lang_choice = int(input("Please choose a number: \n"))
     return lang_choice
 
+
 def language_choice_is_valid(lang_options: Dict[int, str], lang_choice: int) -> bool:
     """
     This method determines if the choice the user made is valid.
@@ -49,7 +50,6 @@ def language_choice_is_valid(lang_options: Dict[int, str], lang_choice: int) -> 
     :param lang_choice: An integer representing the value the user selected
     :return: A boolean representing the validity of the lang_choice
     """
-    #lang_options = lang_dict.keys()
 
     return lang_choice in lang_options
 
@@ -67,8 +67,6 @@ def get_name_input(name_prompt_options: Dict[int, str], lang_choice: int) -> str
 
     return name_prompt_options[lang_choice]
 
-    # return name_prompt_options.get(lang_choice)
-
 
 def name_input(name_prompt: str) -> str:
     """
@@ -77,8 +75,9 @@ def name_input(name_prompt: str) -> str:
     :param name_prompt: A string in the user's chosen language that asks them for their name
     :return: The user's response when asked for their name
     """
-    yourName = input(name_prompt)
-    return yourName
+    your_name = input(name_prompt)
+    return your_name
+
 
 def greet(name: str, greetings_options: Dict[int, str], lang_choice: int) -> None:
     """
@@ -92,7 +91,7 @@ def greet(name: str, greetings_options: Dict[int, str], lang_choice: int) -> Non
     """
 
     print(greetings_options[lang_choice] + ' ' + name)
-    # print(greetings_options.get(lang_choice) + ' ' + name
+
 
 if __name__ == '__main__':
     print_language_options(lang_dict)
